@@ -11,14 +11,11 @@ export function Hero() {
         
         <div className="max-w-4xl mx-auto relative z-10">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
-            Op zoek naar blije medewerkers?
-            <br />
-            <span className="text-[#FF5758]">Waardeer ze met de Waardeerpas!</span>
+            Investeer in energieke medewerkers
           </h1>
           
           <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-            Blije medewerkers zijn geen luxe, maar een randvoorwaarde voor een goede organisatie.
-            Wij bieden één centraal punt voor waardering en voordelen.
+            Medewerkers boeien, binden en behouden met plezier en beleving?
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
