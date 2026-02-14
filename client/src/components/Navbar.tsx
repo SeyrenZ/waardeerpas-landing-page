@@ -1,0 +1,87 @@
+import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
+
+export function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navLinks = [
+    { name: "Over ons", href: "#" },
+    { name: "Voor wie?", href: "#" },
+    { name: "Aanbod", href: "#" },
+    { name: "Cases", href: "#" },
+    { name: "Nieuws", href: "#" },
+  ];
+
+  return (
+    <nav className="fixed w-full z-50 bg-[#FFFAEB]/90 backdrop-blur-md border-b border-[#1E2460]/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
+          <div className="flex-shrink-0 flex items-center">
+            <Link href="/" className="flex items-center gap-2">
+              <div className="w-10 h-10 bg-[#FF5758] rounded-full flex items-center justify-center">
+                <span className="text-white font-bold text-xl">W</span>
+              </div>
+              <span className="font-heading font-bold text-2xl text-[#1E2460]">
+                Waardeerpas
+              </span>
+            </Link>
+          </div>
+
+          {/* Desktop Nav */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-[#1E2460] hover:text-[#FF5758] font-medium transition-colors"
+              >
+                {link.name}
+              </a>
+            ))}
+            <Button 
+              className="bg-[#FF5758] hover:bg-[#FF5758]/90 text-white font-bold px-6 rounded-full"
+            >
+              Contact
+            </Button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-[#1E2460] hover:text-[#FF5758] p-2"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Nav */}
+      {isOpen && (
+        <div className="md:hidden bg-[#FFFAEB] border-b border-[#1E2460]/10">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="block px-3 py-2 text-base font-medium text-[#1E2460] hover:text-[#FF5758] hover:bg-[#1E2460]/5 rounded-md"
+              >
+                {link.name}
+              </a>
+            ))}
+            <div className="px-3 py-2">
+              <Button className="w-full bg-[#FF5758] hover:bg-[#FF5758]/90 text-white font-bold rounded-full">
+                Contact
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+}
