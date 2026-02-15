@@ -5,17 +5,17 @@ export function Hero() {
   return (
     <div className="relative pt-20">
       {/* Main Hero Banner - Dark Blue to match Touch Incentive's bold header style */}
-      <section className="bg-[#1E2460] py-20 px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
+      <section className="bg-[#1E2460] py-12 px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
         {/* Background Pattern/Texture could go here */}
         <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.05)_50%,transparent_75%,transparent_100%)] bg-[length:20px_20px] opacity-20"></div>
         
         <div className="max-w-4xl mx-auto relative z-10">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
-            Investeer in energieke medewerkers
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-4 leading-tight">
+            Het beloningsplatform voor gemotiveerde medewerkers
           </h1>
           
-          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-            Medewerkers boeien, binden en behouden met plezier en beleving?
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Waardeerpas helpt bedrijven hun personeel waarderen met slimme rewards en persoonlijke beleving.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
