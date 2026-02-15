@@ -87,10 +87,11 @@ export function Hero() {
                 Meer dan 15.000 aanbiedingen op digitale producten, fysieke producten en dagjes uit. Alles om jouw medewerkers te verrassen.
               </p>
               <Button 
+                asChild
                 variant="link" 
-                className="text-[#1E2460] font-bold group-hover:text-[#FF5758] transition-colors p-0"
+                className="text-[#1E2460] font-bold group-hover:text-[#FF5758] transition-colors p-0 cursor-pointer"
               >
-                Lees meer <ArrowRight className="w-4 h-4 ml-2" />
+                <a href="#aanbod">Lees meer <ArrowRight className="w-4 h-4 ml-2" /></a>
               </Button>
             </div>
 
