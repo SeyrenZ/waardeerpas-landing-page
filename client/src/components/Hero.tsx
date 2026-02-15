@@ -81,10 +81,10 @@ export function Hero() {
                 <ShoppingBag className="w-10 h-10 text-[#FF5758]" />
               </div>
               <h3 className="text-xl font-bold text-[#1E2460] mb-3">
-                Meer dan 15.000 kortingen
+                Exclusieve Voordelen
               </h3>
               <p className="text-[#1E2460]/70 mb-6 leading-relaxed">
-                Op digitale producten, fysieke producten en dagjes uit. Alles om jouw medewerkers te verrassen.
+                Meer dan 15.000 aanbiedingen op digitale producten, fysieke producten en dagjes uit. Alles om jouw medewerkers te verrassen.
               </p>
               <Button 
                 variant="link" 
