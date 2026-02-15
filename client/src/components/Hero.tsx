@@ -36,6 +36,32 @@ export function Hero() {
         </div>
       </section>
 
+      {/* USPs Section - Added below Hero */}
+      <section className="bg-[#FF5758] py-6 px-4">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 text-white font-bold text-lg">
+          <div className="flex items-center gap-3">
+            <div className="bg-white/20 p-2 rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+            </div>
+            <span>Binnen 16 minuten aangesloten</span>
+          </div>
+          <div className="hidden md:block text-white/40">|</div>
+          <div className="flex items-center gap-3">
+            <div className="bg-white/20 p-2 rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-file-x"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m14.5 12.5-5 5"/><path d="m9.5 12.5 5 5"/></svg>
+            </div>
+            <span>Geen complexe contracten</span>
+          </div>
+          <div className="hidden md:block text-white/40">|</div>
+          <div className="flex items-center gap-3">
+            <div className="bg-white/20 p-2 rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-coins"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg>
+            </div>
+            <span>Vanaf €6 per medewerker p/m</span>
+          </div>
+        </div>
+      </section>
+
       {/* The "One Stop Shop" Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#FFFAEB]">
         <div className="max-w-7xl mx-auto">
