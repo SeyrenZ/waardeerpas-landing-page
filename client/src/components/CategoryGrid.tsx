@@ -6,7 +6,46 @@ const categories = [
     image: "/images/cat-wellness.jpg",
     items: ["Sauna's", "Yoga", "Beauty", "Etc."]
   },
-// ... (rest of categories remain the same)
+  {
+    title: "HEALTH & SPORT",
+    image: "/images/cat-sport.jpg",
+    items: ["Fitness", "Sportclubs", "Bootcamp", "Etc."]
+  },
+  {
+    title: "EROP UIT",
+    image: "/images/cat-fun.jpg",
+    items: ["Pretparken", "Dierentuinen", "Bioscoop", "Etc."]
+  },
+  {
+    title: "CULINAIR",
+    image: "/images/cat-food.jpg",
+    items: ["Restaurants", "Bezorgdiensten", "Keukengerei", "Etc."]
+  },
+  {
+    title: "OP REIS",
+    image: "/images/cat-travel.jpg",
+    items: ["Stedentrips", "Hotels", "Koffers", "Etc."]
+  },
+  {
+    title: "IN HUIS",
+    image: "/images/cat-home.jpg",
+    items: ["Interieur", "Keukenapparatuur", "Home media", "Etc."]
+  },
+  {
+    title: "MOBILITEIT",
+    image: "/images/cat-mobility.jpg",
+    items: ["Fiets", "Deelauto", "Slipcursus", "Etc."]
+  },
+  {
+    title: "DIGITAAL",
+    image: "/images/cat-digital.jpg",
+    items: ["Cursussen", "Streamingdiensten", "E-books", "Etc."]
+  },
+  {
+    title: "PRODUCTEN",
+    image: "/images/cat-products.jpg",
+    items: ["Speakers", "Sporthorloges", "Tassen", "Etc."]
+  },
   {
     title: "WERKPLEK",
     image: "/images/cat-work.jpg",
