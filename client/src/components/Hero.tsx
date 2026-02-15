@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Gift, Heart, ShoppingBag } from "lucide-react";
+import { LogoStrip } from "@/components/LogoStrip";
 
 export function Hero() {
   return (
@@ -61,6 +62,8 @@ export function Hero() {
           </div>
         </div>
       </section>
+
+      <LogoStrip />
 
       {/* The "One Stop Shop" Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#FFFAEB]">
