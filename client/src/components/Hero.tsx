@@ -23,14 +23,14 @@ export function Hero() {
               size="lg"
               className="bg-[#FF5758] hover:bg-[#FF5758]/90 text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg shadow-[#FF5758]/20 transition-all hover:scale-105"
             >
-              Daag ons uit!
+              Early Access
             </Button>
             <Button 
               variant="outline"
               size="lg"
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#1E2460] font-bold text-lg px-8 py-6 rounded-full transition-all"
             >
-              Bekijk demo
+              Plan een meeting
             </Button>
           </div>
         </div>
@@ -49,35 +49,16 @@ export function Hero() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-            {/* Card 1: Belevenissen */}
-            <div className="flex flex-col items-center text-center group">
-              <div className="w-20 h-20 bg-white rounded-2xl shadow-sm border border-[#1E2460]/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Heart className="w-10 h-10 text-[#FF5758]" />
-              </div>
-              <h3 className="text-xl font-bold text-[#1E2460] mb-3">
-                Belevenissen & Uitjes
-              </h3>
-              <p className="text-[#1E2460]/70 mb-6 leading-relaxed">
-                Creëer blijvende herinneringen met exclusieve toegang tot unieke ervaringen en activiteiten die verbondenheid versterken.
-              </p>
-              <Button 
-                variant="link" 
-                className="text-[#1E2460] font-bold group-hover:text-[#FF5758] transition-colors p-0"
-              >
-                Lees meer <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </div>
-
-            {/* Card 2: Fysieke Producten */}
+            {/* Card 1: Kortingen */}
             <div className="flex flex-col items-center text-center group">
               <div className="w-20 h-20 bg-white rounded-2xl shadow-sm border border-[#1E2460]/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <ShoppingBag className="w-10 h-10 text-[#FF5758]" />
               </div>
               <h3 className="text-xl font-bold text-[#1E2460] mb-3">
-                Fysieke Producten
+                Meer dan 15.000 kortingen
               </h3>
               <p className="text-[#1E2460]/70 mb-6 leading-relaxed">
-                Exclusieve toegang tot een gesloten platform met hoogwaardige lifestyle-producten, gadgets en verzorgingsartikelen.
+                Op digitale producten, fysieke producten en dagjes uit. Alles om jouw medewerkers te verrassen.
               </p>
               <Button 
                 variant="link" 
@@ -87,16 +68,35 @@ export function Hero() {
               </Button>
             </div>
 
-            {/* Card 3: Vitaliteit/Geschenken */}
+            {/* Card 2: Keuze Cadeaus */}
             <div className="flex flex-col items-center text-center group">
               <div className="w-20 h-20 bg-white rounded-2xl shadow-sm border border-[#1E2460]/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Gift className="w-10 h-10 text-[#FF5758]" />
               </div>
               <h3 className="text-xl font-bold text-[#1E2460] mb-3">
-                Personeelsgeschenken
+                Keuze cadeaus
               </h3>
               <p className="text-[#1E2460]/70 mb-6 leading-relaxed">
-                Medewerkers boeien, binden en behouden met plezier en beleving? Investeer in energieke medewerkers.
+                Eenvoudig personeel belonen met keuze cadeaus. Geef ze de vrijheid om zelf iets moois uit te zoeken.
+              </p>
+              <Button 
+                variant="link" 
+                className="text-[#1E2460] font-bold group-hover:text-[#FF5758] transition-colors p-0"
+              >
+                Lees meer <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </div>
+
+            {/* Card 3: Kerstcadeaus */}
+            <div className="flex flex-col items-center text-center group">
+              <div className="w-20 h-20 bg-white rounded-2xl shadow-sm border border-[#1E2460]/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Heart className="w-10 h-10 text-[#FF5758]" />
+              </div>
+              <h3 className="text-xl font-bold text-[#1E2460] mb-3">
+                Kerstcadeaus
+              </h3>
+              <p className="text-[#1E2460]/70 mb-6 leading-relaxed">
+                Regel kerstcadeaus met 1 druk op de knop. Volledige ontzorging tijdens de drukste tijd van het jaar.
               </p>
               <Button 
                 variant="link" 
