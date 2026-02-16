@@ -80,80 +80,68 @@ export function Hero() {
       <LogoStrip />
 
       {/* The "One Stop Shop" Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-10 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#1E2460] mb-4">
               Eén centraal punt voor waardering
             </h2>
-            <p className="text-[#FF5758] font-bold text-xl uppercase tracking-wide">
+            <p className="text-[#FF5758] font-bold sm:text-xl uppercase tracking-wide">
               Belevenissen, Producten & Vitaliteit
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-            {/* Card 1: Kortingen */}
-            <div className="flex flex-col items-center text-center group">
-              <div className="w-20 h-20 bg-white rounded-2xl shadow-sm border border-[#1E2460]/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <ShoppingBag className="w-10 h-10 text-[#FF5758]" />
-              </div>
-              <h3 className="text-xl font-bold text-[#1E2460] mb-3">
-                Exclusieve Voordelen
-              </h3>
-              <p className="text-[#1E2460]/70 mb-6 leading-relaxed">
-                Meer dan 15.000 aanbiedingen op digitale producten, fysieke
-                producten en dagjes uit. Alles om jouw medewerkers te verrassen.
-              </p>
-              <Button
-                asChild
-                variant="link"
-                className="text-[#1E2460] font-bold group-hover:text-[#FF5758] transition-colors p-0 cursor-pointer"
+            {[
+              {
+                icon: ShoppingBag,
+                title: "Exclusieve Voordelen",
+                description:
+                  "Meer dan 15.000 aanbiedingen op digitale producten, fysieke producten en dagjes uit. Alles om jouw medewerkers te verrassen.",
+                href: "#aanbod",
+              },
+              {
+                icon: Gift,
+                title: "Keuze cadeaus",
+                description:
+                  "Eenvoudig personeel belonen met keuze cadeaus. Geef ze de vrijheid om zelf iets moois uit te zoeken.",
+                href: "#",
+              },
+              {
+                icon: Heart,
+                title: "Kerstcadeaus",
+                description:
+                  "Regel kerstcadeaus met 1 druk op de knop. Volledige ontzorging tijdens de drukste tijd van het jaar.",
+                href: "#",
+              },
+            ].map((feature, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center text-center justify-between group"
               >
-                <a href="#aanbod">
-                  Lees meer <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
-              </Button>
-            </div>
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-20 h-20 bg-white rounded-2xl shadow-sm border border-[#1E2460]/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="w-10 h-10 text-[#FF5758]" />
+                  </div>
 
-            {/* Card 2: Keuze Cadeaus */}
-            <div className="flex flex-col items-center text-center group">
-              <div className="w-20 h-20 bg-white rounded-2xl shadow-sm border border-[#1E2460]/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Gift className="w-10 h-10 text-[#FF5758]" />
+                  <h3 className="text-xl font-bold text-[#1E2460] mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-[#1E2460]/70 mb-6 leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+                <Button
+                  asChild
+                  variant="link"
+                  className="text-[#1E2460] font-bold group-hover:text-[#FF5758] transition-colors p-0 cursor-pointer"
+                >
+                  <a href={feature.href}>
+                    Lees meer <ArrowRight className="w-4 h-4 mt-0.5" />
+                  </a>
+                </Button>
               </div>
-              <h3 className="text-xl font-bold text-[#1E2460] mb-3">
-                Keuze cadeaus
-              </h3>
-              <p className="text-[#1E2460]/70 mb-6 leading-relaxed">
-                Eenvoudig personeel belonen met keuze cadeaus. Geef ze de
-                vrijheid om zelf iets moois uit te zoeken.
-              </p>
-              <Button
-                variant="link"
-                className="text-[#1E2460] font-bold group-hover:text-[#FF5758] transition-colors p-0"
-              >
-                Lees meer <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </div>
-
-            {/* Card 3: Kerstcadeaus */}
-            <div className="flex flex-col items-center text-center group">
-              <div className="w-20 h-20 bg-white rounded-2xl shadow-sm border border-[#1E2460]/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Heart className="w-10 h-10 text-[#FF5758]" />
-              </div>
-              <h3 className="text-xl font-bold text-[#1E2460] mb-3">
-                Kerstcadeaus
-              </h3>
-              <p className="text-[#1E2460]/70 mb-6 leading-relaxed">
-                Regel kerstcadeaus met 1 druk op de knop. Volledige ontzorging
-                tijdens de drukste tijd van het jaar.
-              </p>
-              <Button
-                variant="link"
-                className="text-[#1E2460] font-bold group-hover:text-[#FF5758] transition-colors p-0"
-              >
-                Lees meer <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </div>
+            ))}
           </div>
         </div>
       </section>
