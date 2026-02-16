@@ -16,20 +16,11 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="fixed w-full z-50 bg-[#FFFAEB]/90 backdrop-blur-md border-b border-[#1E2460]/10">
+    <nav className="fixed w-full z-50 bg-[#FFFAEB] backdrop-blur-md border-b border-[#1E2460]/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-[#FF5758] rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xl">W</span>
-              </div>
-              <span className="font-heading font-bold text-2xl text-[#1E2460]">
-                Waardeerpas
-              </span>
-            </Link>
-          </div>
+          <img src="/logo.png" alt="Logo" className="w-40" />
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-8">
@@ -42,9 +33,7 @@ export function Navbar() {
                 {link.name}
               </a>
             ))}
-            <Button 
-              className="bg-[#FF5758] hover:bg-[#FF5758]/90 text-white font-bold px-6 rounded-full"
-            >
+            <Button className="bg-[#FF5758] h-12 hover:bg-[#FF5758]/90 text-white font-bold px-6 rounded-full">
               Contact
             </Button>
           </div>
@@ -74,11 +63,10 @@ export function Navbar() {
                 {link.name}
               </a>
             ))}
-            <div className="px-3 py-2">
-              <Button className="w-full bg-[#FF5758] hover:bg-[#FF5758]/90 text-white font-bold rounded-full">
-                Contact
-              </Button>
-            </div>
+
+            <Button className="w-full bg-[#FF5758] hover:bg-[#FF5758]/90 text-white font-bold rounded-full">
+              Contact
+            </Button>
           </div>
         </div>
       )}
