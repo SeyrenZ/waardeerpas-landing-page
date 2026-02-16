@@ -45,12 +45,12 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button className="bg-[#FF5758] hover:bg-[#FF5758]/90 text-white font-bold text-lg px-8 h-12 rounded-full shadow-lg shadow-[#FF5758]/20 transition-all hover:scale-105">
+            <Button className="bg-[#FF5758] hover:bg-[#FF5758]/90 text-white font-bold sm:text-lg text-base px-8 h-12 rounded-full shadow-lg shadow-[#FF5758]/20 transition-all hover:scale-105">
               Early Access
             </Button>
             <Button
               variant="outline"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#1E2460] font-bold text-lg px-8 h-12 rounded-full transition-all"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#1E2460] font-bold sm:text-lg text-base px-8 h-12 rounded-full transition-all"
             >
               Plan een meeting
             </Button>
