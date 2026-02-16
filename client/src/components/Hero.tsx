@@ -1,8 +1,32 @@
+import { Fragment } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Gift, Heart, ShoppingBag } from "lucide-react";
+import {
+  ArrowRight,
+  CheckIcon,
+  Coins,
+  FileXIcon,
+  Gift,
+  Heart,
+  ShoppingBag,
+} from "lucide-react";
 import { LogoStrip } from "@/components/LogoStrip";
 
 export function Hero() {
+  const usps = [
+    {
+      icon: CheckIcon,
+      text: "Binnen 16 minuten aangesloten",
+    },
+    {
+      icon: FileXIcon,
+      text: "Geen complexe contracten",
+    },
+    {
+      icon: Coins,
+      text: "Vanaf €6 per medewerker p/m",
+    },
+  ];
+
   return (
     <div className="relative sm:pt-20 pt-14">
       {/* Main Hero Banner - Dark Blue to match Touch Incentive's bold header style */}
@@ -11,26 +35,22 @@ export function Hero() {
         <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.05)_50%,transparent_75%,transparent_100%)] bg-[length:20px_20px] opacity-20"></div>
 
         <div className="max-w-4xl mx-auto relative z-10">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-4 leading-tight">
+          <h1 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4 leading-tight">
             Het beloningsplatform voor gemotiveerde medewerkers
           </h1>
 
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Waardeerpas helpt bedrijven hun personeel waarderen met slimme
             rewards en persoonlijke beleving.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button
-              size="lg"
-              className="bg-[#FF5758] hover:bg-[#FF5758]/90 text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg shadow-[#FF5758]/20 transition-all hover:scale-105"
-            >
+            <Button className="bg-[#FF5758] hover:bg-[#FF5758]/90 text-white font-bold text-lg px-8 h-12 rounded-full shadow-lg shadow-[#FF5758]/20 transition-all hover:scale-105">
               Early Access
             </Button>
             <Button
               variant="outline"
-              size="lg"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#1E2460] font-bold text-lg px-8 py-6 rounded-full transition-all"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#1E2460] font-bold text-lg px-8 h-12 rounded-full transition-all"
             >
               Plan een meeting
             </Button>
@@ -39,73 +59,21 @@ export function Hero() {
       </section>
 
       {/* USPs Section - Added below Hero */}
-      <section className="bg-[#FF5758] py-6 px-4">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 text-white font-bold text-lg">
-          <div className="flex items-center gap-3">
-            <div className="bg-white/20 p-2 rounded-full">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-check"
-              >
-                <path d="M20 6 9 17l-5-5" />
-              </svg>
-            </div>
-            <span>Binnen 16 minuten aangesloten</span>
-          </div>
-          <div className="hidden md:block text-white/40">|</div>
-          <div className="flex items-center gap-3">
-            <div className="bg-white/20 p-2 rounded-full">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-file-x"
-              >
-                <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
-                <path d="M14 2v4a2 2 0 0 0 2 2h4" />
-                <path d="m14.5 12.5-5 5" />
-                <path d="m9.5 12.5 5 5" />
-              </svg>
-            </div>
-            <span>Geen complexe contracten</span>
-          </div>
-          <div className="hidden md:block text-white/40">|</div>
-          <div className="flex items-center gap-3">
-            <div className="bg-white/20 p-2 rounded-full">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-coins"
-              >
-                <circle cx="8" cy="8" r="6" />
-                <path d="M18.09 10.37A6 6 0 1 1 10.34 18" />
-                <path d="M7 6h1v4" />
-                <path d="m16.71 13.88.7.71-2.82 2.82" />
-              </svg>
-            </div>
-            <span>Vanaf €6 per medewerker p/m</span>
-          </div>
+      <section className="bg-[#FF5758] sm:py-6 py-4 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center gap-4 md:gap-12 text-white font-bold text-sm sm:text-lg">
+          {usps.map((usp, index) => (
+            <Fragment key={index}>
+              <div className="flex items-center gap-3">
+                <div className="bg-white/20 p-2 rounded-full">
+                  <usp.icon className="w-4 h-4 sm:w-6 sm:h-6" />
+                </div>
+                <span>{usp.text}</span>
+              </div>
+              {index < usps.length - 1 && (
+                <div className="hidden md:block text-white/40">|</div>
+              )}
+            </Fragment>
+          ))}
         </div>
       </section>
 
