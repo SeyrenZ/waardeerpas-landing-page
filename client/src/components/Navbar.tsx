@@ -16,11 +16,11 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="fixed w-full z-50 bg-[#FFFAEB] backdrop-blur-md border-b border-[#1E2460]/10">
+    <nav className="fixed w-full z-50 bg-white backdrop-blur-md border-b border-[#1E2460]/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16 sm:h-20">
           {/* Logo */}
-          <img src="/logo.png" alt="Logo" className="w-40" />
+          <img src="/logo.png" alt="Logo" className="w-28 sm:w-40" />
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-8">
@@ -52,7 +52,7 @@ export function Navbar() {
 
       {/* Mobile Nav */}
       {isOpen && (
-        <div className="md:hidden bg-[#FFFAEB] border-b border-[#1E2460]/10">
+        <div className="md:hidden bg-white border-b border-[#1E2460]/10">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <a

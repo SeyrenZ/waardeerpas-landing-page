@@ -7,14 +7,14 @@ import { CookieBanner } from "@/components/CookieBanner";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#FFFAEB]">
+    <div className="min-h-screen bg-white overflow-hidden">
       <Navbar />
       <main>
         <Hero />
         <CategoryGrid />
         <ImpactSection />
       </main>
-      
+
       <Footer />
       <CookieBanner />
     </div>

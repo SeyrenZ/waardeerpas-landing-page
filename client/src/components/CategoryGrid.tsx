@@ -4,53 +4,53 @@ const categories = [
   {
     title: "ONTSPANNING",
     image: "/images/cat-wellness.jpg",
-    items: ["Sauna's", "Yoga", "Beauty", "Etc."]
+    items: ["Sauna's", "Yoga", "Beauty", "Etc."],
   },
   {
     title: "HEALTH & SPORT",
     image: "/images/cat-sport.jpg",
-    items: ["Fitness", "Sportclubs", "Bootcamp", "Etc."]
+    items: ["Fitness", "Sportclubs", "Bootcamp", "Etc."],
   },
   {
     title: "EROP UIT",
     image: "/images/cat-fun.jpg",
-    items: ["Pretparken", "Dierentuinen", "Bioscoop", "Etc."]
+    items: ["Pretparken", "Dierentuinen", "Bioscoop", "Etc."],
   },
   {
     title: "CULINAIR",
     image: "/images/cat-food.jpg",
-    items: ["Restaurants", "Bezorgdiensten", "Keukengerei", "Etc."]
+    items: ["Restaurants", "Bezorgdiensten", "Keukengerei", "Etc."],
   },
   {
     title: "OP REIS",
     image: "/images/cat-travel.jpg",
-    items: ["Stedentrips", "Hotels", "Koffers", "Etc."]
+    items: ["Stedentrips", "Hotels", "Koffers", "Etc."],
   },
   {
     title: "IN HUIS",
     image: "/images/cat-home.jpg",
-    items: ["Interieur", "Keukenapparatuur", "Home media", "Etc."]
+    items: ["Interieur", "Keukenapparatuur", "Home media", "Etc."],
   },
   {
     title: "MOBILITEIT",
     image: "/images/cat-mobility.jpg",
-    items: ["Fiets", "Deelauto", "Slipcursus", "Etc."]
+    items: ["Fiets", "Deelauto", "Slipcursus", "Etc."],
   },
   {
     title: "DIGITAAL",
     image: "/images/cat-digital.jpg",
-    items: ["Cursussen", "Streamingdiensten", "E-books", "Etc."]
+    items: ["Cursussen", "Streamingdiensten", "E-books", "Etc."],
   },
   {
     title: "PRODUCTEN",
     image: "/images/cat-products.jpg",
-    items: ["Speakers", "Sporthorloges", "Tassen", "Etc."]
+    items: ["Speakers", "Sporthorloges", "Tassen", "Etc."],
   },
   {
     title: "WERKPLEK",
     image: "/images/cat-work.jpg",
-    items: ["Bureaus", "Stoelen", "Randapparatuur", "Etc."]
-  }
+    items: ["Bureaus", "Stoelen", "Randapparatuur", "Etc."],
+  },
 ];
 
 export function CategoryGrid() {
@@ -59,10 +59,12 @@ export function CategoryGrid() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#1E2460] mb-6">
-            Ontdek de kracht van <span className="text-[#FF5758]">keuzevrijheid</span>
+            Ontdek de kracht van{" "}
+            <span className="text-[#FF5758]">keuzevrijheid</span>
           </h2>
           <p className="text-xl text-[#1E2460]/70 max-w-3xl mx-auto">
-            Van ontspanning tot avontuur en van gadgets tot gezonde extra's. Wij bieden voor ieder wat wils.
+            Van ontspanning tot avontuur en van gadgets tot gezonde extra's. Wij
+            bieden voor ieder wat wils.
           </p>
         </div>
 
@@ -72,38 +74,45 @@ export function CategoryGrid() {
             {
               icon: Star,
               title: "Enorm Aanbod",
-              text: "Meer dan 10.000 partners zorgen voor eindeloze keuze en variatie."
+              text: "Meer dan 10.000 partners zorgen voor eindeloze keuze en variatie.",
             },
             {
               icon: RefreshCw,
               title: "Altijd Iets Nieuws",
-              text: "Maandelijks verse deals en exclusieve acties, speciaal voor jouw team."
+              text: "Maandelijks verse deals en exclusieve acties, speciaal voor jouw team.",
             },
             {
               icon: Zap,
               title: "Alles-in-één Mix",
-              text: "Van dagjes uit en diners tot gadgets en wellness. Alles op één plek."
+              text: "Van dagjes uit en diners tot gadgets en wellness. Alles op één plek.",
             },
             {
               icon: Lightbulb,
               title: "Jouw Inbreng Telt",
-              text: "Mis je een favoriete plek? Wij voegen jouw tips toe aan het aanbod."
+              text: "Mis je een favoriete plek? Wij voegen jouw tips toe aan het aanbod.",
             },
             {
               icon: Users,
               title: "Slimme Teamuitjes",
-              text: "Regel eenvoudig teamuitjes en profiteer direct van groepskorting."
-            }
+              text: "Regel eenvoudig teamuitjes en profiteer direct van groepskorting.",
+            },
           ].map((feature, idx) => (
-            <div key={idx} className="flex gap-4 p-6 bg-[#FFFAEB] rounded-xl border border-[#1E2460]/5 hover:shadow-md transition-shadow">
+            <div
+              key={idx}
+              className="flex gap-4 p-6 bg-white rounded-xl border border-[#1E2460]/5 hover:shadow-md transition-shadow"
+            >
               <div className="flex-shrink-0">
                 <div className="w-12 h-12 bg-[#FF5758]/10 rounded-full flex items-center justify-center text-[#FF5758]">
                   <feature.icon className="w-6 h-6" />
                 </div>
               </div>
               <div>
-                <h3 className="font-bold text-[#1E2460] text-lg mb-2">{feature.title}</h3>
-                <p className="text-[#1E2460]/70 text-sm leading-relaxed">{feature.text}</p>
+                <h3 className="font-bold text-[#1E2460] text-lg mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-[#1E2460]/70 text-sm leading-relaxed">
+                  {feature.text}
+                </p>
               </div>
             </div>
           ))}
@@ -117,8 +126,8 @@ export function CategoryGrid() {
                 {category.title}
               </div>
               <div className="aspect-[3/4] overflow-hidden bg-gray-100 relative">
-                <img 
-                  src={category.image} 
+                <img
+                  src={category.image}
                   alt={category.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -129,7 +138,10 @@ export function CategoryGrid() {
               <div className="pt-3 bg-white border-x border-b border-gray-100 rounded-b-lg p-3 h-full">
                 <ul className="space-y-1.5">
                   {category.items.map((item, i) => (
-                    <li key={i} className="text-xs text-[#1E2460]/80 flex items-center gap-2">
+                    <li
+                      key={i}
+                      className="text-xs text-[#1E2460]/80 flex items-center gap-2"
+                    >
                       <span className="w-1 h-1 bg-[#FF5758] rounded-full"></span>
                       {item}
                     </li>
